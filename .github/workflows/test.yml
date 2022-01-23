@@ -7,7 +7,7 @@ on:
     tags: ["v*.*.*"]
 
 env:
-  TEST: ${{ secrets.TEST }}
+  TEST: ${{ secrets.SOME_TEST }}
   FOO: "bar"
 
 jobs:
