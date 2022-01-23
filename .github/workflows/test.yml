@@ -20,5 +20,9 @@ jobs:
       id-token: write
 
     steps:
+      - name: Hello World
+        run: echo "Hello World"
+      - name: Environment
+        run: env
       - name: Test secret
         run: echo $TEST
