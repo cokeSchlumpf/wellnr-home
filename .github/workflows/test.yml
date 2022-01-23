@@ -1,4 +1,4 @@
-name: Docker
+name: Test
 
 on:
   push:
@@ -8,6 +8,7 @@ on:
 
 env:
   TEST: ${{ secrets.TEST }}
+  FOO: "bar"
 
 jobs:
   build:
@@ -24,5 +25,7 @@ jobs:
         run: echo "Hello World"
       - name: Environment
         run: env
+      - name: Test env var
+        run: echo $FOO
       - name: Test secret
         run: echo $TEST
